@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 // Load models
 
-const Post = require("../../models/post");
+const Post = require("../../models/Post");
 const Profile = require("../../models/Profile");
 
 // Validation
