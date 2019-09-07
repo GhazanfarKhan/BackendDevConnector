@@ -5,7 +5,7 @@ const isEmpty = require('./is-empty');
 module.exports = function (data) {
   let errors = {};
 
-  data.title = !isEmpty(data.title) ? data.name : '';
+  data.title = !isEmpty(data.title) ? data.title : '';
   data.company = !isEmpty(data.company) ? data.company : '';
   data.from = !isEmpty(data.from) ? data.from : '';
 

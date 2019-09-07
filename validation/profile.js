@@ -5,25 +5,26 @@ const isEmpty = require('./is-empty');
 module.exports = function (data) {
   let errors = {};
 
+  console.log(data);
   data.handle = !isEmpty(data.handle) ? data.handle : '';
   data.status = !isEmpty(data.status) ? data.status : '';
   data.skills = !isEmpty(data.skills) ? data.skills : '';
 
 
-  if (!validator.isLength(data.name, { min: 3, max: 40 })) {
+  if (!validator.isLength(data.handle, { min: 3, max: 40 })) {
     errors.handle = "Handle needs to be between 3 and 40 characters";
   }
 
   if (validator.isEmpty(data.handle)) {
-    errors.email = "Profile handle is required";
+    errors.handle = "Profile handle is required";
   }
 
   if (validator.isEmpty(data.status)) {
-    errors.email = "Status field is required";
+    errors.status = "Status field is required";
   }
 
   if (validator.isEmpty(data.skills)) {
-    errors.password = "Skill field is required";
+    errors.skills = "Skill field is required";
   }
 
   if (!isEmpty(data.website)) {
